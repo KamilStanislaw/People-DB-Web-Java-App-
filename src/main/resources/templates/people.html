@@ -65,11 +65,11 @@
             </ul>
         </nav>
         <div class="mb-3">
-            <label for="csvFile" class="form-label" th:text="#{people.form.csv}">CSV File</label>
+            <label for="csvFile" class="form-label" th:text="#{people.form.csv}">Select .zip with CSV file</label>
             <input class="form-control" type="file" id="csvFile" name="csvFile" >
         </div>
         <button type="submit" name="action" value="edit" class="btn btn-primary mb-5 me-2" th:text="#{people.button.edit}">Edit</button>
-        <button type="submit" name="action" value="import" class="btn btn-success mb-5 me-2" th:text="#{people.button.import}">Import CSV</button>
+        <button type="submit" name="action" value="import" class="btn btn-success mb-5 me-2" th:text="#{people.button.import}">Import .zip</button>
         <button type="submit" name="action" value="delete" class="btn btn-danger mb-5" th:text="#{people.button.delete}">Delete</button>
     </form>
 

@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 @Repository
 public class FileStorageRepository {
 
-    @Value("${STORAGE_FOLDER}") //storage in local file system
+    @Value("${STORAGE_FOLDER}") //storage in local file system -> Edit Configurations, add variable
     private String storageFolder;
     public void save(String originalFilename, InputStream inputStream) {
         try {
