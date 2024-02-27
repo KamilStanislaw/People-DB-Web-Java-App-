@@ -58,7 +58,7 @@ public class PersonService {
             InputStreamReader inputStreamReader = new InputStreamReader(zipInputStream);
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             bufferedReader.lines()
-                    .skip(41)
+                    .skip(21)
                     .limit(20)
                     .map(Person::parse)
                     .forEach(personRepository::save);
