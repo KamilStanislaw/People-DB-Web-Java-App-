@@ -105,11 +105,11 @@ public class PeopleController {
     }
 
     @PostMapping(params = "action=import")
-    public String importCSV(@RequestParam MultipartFile csvFile) { //.csv from .zip
-        log.info("File name: " + csvFile.getOriginalFilename());
-        log.info("File size: " + csvFile.getSize());
+    public String importCSV(@RequestParam MultipartFile zipFile) { //.csv from .zip
+        log.info("File name: " + zipFile.getOriginalFilename());
+        log.info("File size: " + zipFile.getSize());
         try {
-            personService.importCSV(csvFile.getInputStream());
+            personService.importCSV(zipFile.getInputStream()); //or .zip
         } catch (IOException e) {
             e.printStackTrace();
         }
